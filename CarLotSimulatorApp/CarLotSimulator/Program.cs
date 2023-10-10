@@ -49,11 +49,11 @@ namespace CarLotSimulator
             carLot.Cars.Add(car1);
             carLot.Cars.Add(car2);
             carLot.Cars.Add(car3);
-
+            CarLot.numberOfCars += 3;
             foreach (var car in carLot.Cars)
             {
                 car.MakeEngineNoise(car.EngineNoise);
-                car.MakeHonkNoise(car.HonkNoise);
+                car.MakeHonkNoise(car.HonkNoise);              
             }
 
             Console.WriteLine("\nCars in CarLot:");
@@ -61,6 +61,7 @@ namespace CarLotSimulator
             {
                 Console.WriteLine($"{car.Year} {car.Make} {car.Model}");
             }
+            Console.WriteLine($"Number of cars in the car lot: {CarLot.numberOfCars}");
             //*************BONUS*************//
 
             // Set the properties utilizing the 3 different ways we learned about, one way for each car
